@@ -86,7 +86,7 @@ function ProjectCard({
   return (
     <div className="flex flex-col">
       <div className="flex items-center gap-4">
-        <h1 className="text-xl md:text-2xl">{title}</h1>
+        <h1 className="text-md">{title}</h1>
         <p className="px-2 py-[3px] bg-black dark:bg-white text-white dark:text-black  rounded-lg">
           {date}
         </p>
@@ -98,7 +98,7 @@ function ProjectCard({
         <Link
           target="_blank"
           href={websiteLink || ""}
-          className="mt-2 text-md hover:underline hover:cursor-pointer"
+          className="mt-2 text-sm hover:underline hover:cursor-pointer"
         >
           Link Website
         </Link>
