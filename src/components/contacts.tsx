@@ -23,7 +23,7 @@ export default function Contacts() {
   };
 
   return (
-    <section className="mt-12" id="contact">
+    <section id="contact">
       <div className="container mx-auto">
         <h1 className="text-lg font-bold">Contacts</h1>
         <div className="flex flex-col mt-4 gap-4">

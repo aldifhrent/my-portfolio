@@ -27,7 +27,7 @@ const TopMenu = () => {
 
   return (
     <section className="pt-4">
-      <div className="container flex justify-end ml-auto">
+      <div className="container flex justify-end ml-auto items-center">
         <button
           onClick={handleTheme}
           aria-label="Toggle theme"

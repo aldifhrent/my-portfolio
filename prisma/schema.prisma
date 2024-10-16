@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TypeProject {
+  SLICING
+  FULL_STACK
+
+  @@map("typeproject")
+}
+
+model Project {
+  id          String      @default(cuid())
+  projectId   String      @unique
+  name        String
+  description String
+  typeProject TypeProject
+  tech        String[]
+  website     String
+  repository  String
+  createAt    DateTime    @default(now())
+  updateAt    DateTime
+
+  @@map("project")
+}
+
+model workExperience {
+  id         String   @default(cuid())
+  workId     String   @unique
+  name       String
+  desription String
+  date       DateTime
+  createAt   DateTime @default(now())
+  updateAt   DateTime
+
+  @@map("work")
+}
